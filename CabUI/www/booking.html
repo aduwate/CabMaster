@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CabBooking</title>
+<link href="css/booking_css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cab Booking" />
+<!-- //end-smoth-scrolling -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					$(document).ready(function () {
+						$('#horizontalTab').easyResponsiveTabs({
+							type: 'default',           
+							width: 'auto', 
+							fit: true   
+						});
+					});
+				   </script>
+
+<!--webfonts-->
+<link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+							
+				<div class="travel-section w3l-agile">
+			       <div class="main-left">
+					  <div class="flexslider">
+						<ul class="slides">
+							<li>
+								<div class="main-grid">
+									<img src="images/1.jpg" class="img-responsive" />
+								</div>
+							</li>
+							<li>
+								<div class="main-grid">
+									<img src="images/2.jpg" class="img-responsive" />
+								</div>
+							</li>
+							<li>
+								<div class="main-grid">
+									<img src="images/3.jpg" class="img-responsive" />
+								</div>
+							</li>
+							<li>
+								<div class="main-grid">
+									<img src="images/4.jpg" class="img-responsive" />
+								</div>
+							</li>
+						</ul>
+					</div>
+						<!--FlexSlider-->
+							<link rel="stylesheet" href="css/booking_css/flexslider.css" type="text/css" media="screen" />
+							<script defer src="js/jquery.flexslider.js"></script>
+							<script type="text/javascript">
+							$(window).load(function(){
+							  $('.flexslider').flexslider({
+								animation: "slide",
+								start: function(slider){
+								  $('body').removeClass('loading');
+								}
+							  });
+							});
+						  </script>
+					<!--End-slider-script-->
+				</div>
+
+			<div class="main w3l">
+						<div class="facts">
+						<div class="sap_tabs">	
+							<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+								<div class="tab">
+									<ul>
+										<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Book A Cab</span></li>
+										<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>My Bookings</span></li>
+										  
+									</ul>
+								</div>					
+		<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+			<div class="booking-form">
+								<div class="online_reservation">
+										<div class="b_room">
+											<div class="booking_room">
+												<div class="reservation">
+													<ul>		
+														<li  class="span1_of_1 desti">
+														 <h4>Choose your destination </h4>
+															 <div class="section_dest">
+																  <select>
+																		<option value="0">Destination City</option>
+																		<option value="1">Usa</option>
+																		<option value="2">London</option>
+																		<option value="3">Mexico</option>
+																		<option value="4">India</option>
+																	</select>
+															 </div>					
+														 </li>
+													</ul>
+												</div>
+												<div class="reservation">
+													<ul>	
+														 <li  class="span1_of_1">
+															 <h5>Check in date </h5>
+															 <div class="book_date">
+																
+																	<input class="date" id="datepicker" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
+																
+															</div>	
+
+														 </li>
+														 <li  class="span1_of_1 left">
+															 <h5>Check out date </h5>
+															 <div class="book_date">
+																
+																	<input class="date" id="datepicker1" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
+																
+															 </div>					
+														 </li>
+														  <div class="clear"></div>
+														 </ul>
+														 <div class="groups">
+				                                                 <div class="grid_4 columns">
+																			<h5>Rooms</h5>
+																				<select class="custom-select" id="select-4">
+																					<option selected="selected">1</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																					<option>4</option>
+																				</select>
+																			</div>		
+																			<div class="grid_5 columns">
+																				<h5>Adults</h5>
+																				<select class="custom-select" id="select-5">
+																					<option selected="selected">0</option>
+																					<option>0</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																				</select>
+																			</div>	
+																			<div class="grid_6 columns">
+																				<h5>Child</h5>
+																				<select class="custom-select" id="select-6">
+																					<option selected="selected">0</option>
+																					<option>0</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																				</select>
+																			</div>	
+																			<div class="clear"></div>
+																		</div>
+														<!---strat-date-piker---->
+															<link rel="stylesheet" href="css/booking_css/jquery-ui.css" />
+															<script src="js/jquery-ui.js"></script>
+															  <script>
+																	  $(function() {
+																		$( "#datepicker,#datepicker1" ).datepicker();
+																	  });
+															  </script>
+														<!---/End-date-piker---->
+												</div>
+													
+													<div class="date_btn">
+																	
+															<input type="submit" value="Book It">
+																	
+														</div>
+												
+											</div>
+											<div class="clear"></div>
+										</div>
+								</div>
+								<!---->
+							</div>	
+						</div>
+						<div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
+							<div class="booking-form">
+								<div class="online_reservation">
+										<div class="b_room">
+											<div class="booking_room">
+											<form action="#" method="post">
+												<div class="reservation">
+													<ul>		
+														<li  class="span1_of_1 desti">
+														 <h4>What are you looking for? </h4>
+															 <div class="section_dest">
+																  <select>
+																		<option value="0">Destination City</option>
+																		<option value="1">Usa</option>
+																		<option value="2">London</option>
+																		<option value="3">Mexico</option>
+																		<option value="4">India</option>
+																	</select>
+															 </div>					
+														 </li>
+													</ul>
+												</div>
+												<div class="reservation">
+													
+														 <div class="groups">
+				                                                 <div class="grid_4 columns one">
+																			<h5>Hotels</h5>
+																				<select class="custom-select" id="select-4">
+																					<option selected="selected">Congue</option>
+																					<option>Tempor</option>
+																					<option>Maxim </option>
+																					<option>Villas</option>
+																					<option>Newro</option>
+																				</select>
+																			</div>		
+																			<div class="grid_5 columns one">
+																				<h5>Rooms</h5>
+																				<select class="custom-select" id="select-5">
+																					<option selected="selected">0</option>
+																					<option>0</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																				</select>
+																			</div>	
+
+																			<div class="clear"></div>
+																		</div>
+														<!---strat-date-piker---->
+															<link rel="stylesheet" href="css/booking_css/jquery-ui.css" />
+															<script src="js/jquery-ui.js"></script>
+															  <script>
+																	  $(function() {
+																		$( "#datepicker,#datepicker1" ).datepicker();
+																	  });
+															  </script>
+														<!---/End-date-piker---->
+												</div>
+													
+																<div class="date_btn">
+																	
+																		<input type="submit" value="Search">
+																	
+																</div>
+																</form>
+											</div>
+											<div class="clear"></div>
+										</div>
+								</div>
+								<!---->
+							</div>
+						</div> 			        					            	      
+					</div>	
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		
+	<!--//end-copyright-->
+	<script src="js/app.js" />
+</body>
+</html>

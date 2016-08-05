@@ -1,0 +1,93 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CabBooking</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Cab booking" />
+<!--google fonts-->
+<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+</head>
+<body>		
+	<div>
+		<div class="modal-content modal-info">
+			<div class="modal-header">				
+				<h3>Sign up form</h3>						
+			</div>
+			<div class="lo-im w3agile">							
+			<img src="images/john.png" title="logo" alt="logo" />	
+		</div>
+			<div class="modal-body modal-spa">
+				<div class="login-form">	
+					<ol>
+					<li>
+							<input type="text" id="fname" name="name" placeholder="First name" title="Name" required />
+							
+						</li>
+						<li>
+							<input type="text" id="lname" name="name" placeholder="Last name" title="Name" required />
+							
+						</li>
+						<li>
+							<input type="email" id="email" name="email" placeholder="Mail@example.com" title="Please enter a valid email" required />
+							
+						</li>
+						<li>
+							<input type="tel" id="tel" name="tel" pattern="\d{10}" placeholder="Please enter a phone number" required />
+						</li>
+						<li>
+							<input type="password" class="lock" name="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" placeholder="Password" id="txtPass" required />
+							
+						</li>
+						<li>
+							<input type="password" class="lock" name="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" placeholder="Confirm Password" id="txtPass2" required />
+							
+						</li>
+						</ol>
+						<div class="signin-rit">
+							<span class="checkbox1">
+								 <label class="checkbox"><input type="checkbox" name="checkbox" checked="" required>I agree to <a class="pp" href="#"> Terms</a> and <a class="pp" href="#"> Privacy Policy</a></label>
+							</span>
+							<div class="clear"> </div>
+						</div>
+						<button id="btnSignup" value="Sign Up">Sign Up</button>
+					<!-- script for password confirmation -->
+					<script type="text/javascript">
+						window.onload = function () {
+							document.getElementById("txtPass").onchange = validatePassword;
+							document.getElementById("txtPass2").onchange = validatePassword;
+						}
+						function validatePassword(){
+						var pass2=document.getElementById("txtPass2").value;
+						var pass1=document.getElementById("txtPass").value;
+						if(pass1!=pass2)
+							document.getElementById("txtPass2").setCustomValidity("Passwords Don't Match");
+						else
+						document.getElementById("txtPass2").setCustomValidity('');	 
+						//empty string means no validation error
+						}
+					</script>
+					<!-- //script for password confirmation -->
+																										
+					</div>									
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script src="js/app.js"></script>
+</body>
+</html>
