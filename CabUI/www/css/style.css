@@ -94,6 +94,8 @@ img{max-width:100%;}
 
 	
 }
+
+
 #signup input:focus + .validation01 { 
 	display: block; 
 }

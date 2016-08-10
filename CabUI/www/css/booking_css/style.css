@@ -35,6 +35,12 @@ body{
 
 }
 
+.hide {
+    text-indent: -9999px;                 /* sends the text off-screen */
+    background-image: url(/the_img.png);  /* shows image */
+    white-space: nowrap;            /* because only the first line is indented */
+  }
+
 input, button, select, textarea {
     font-family: 'Open Sans', sans-serif!important;
 }
@@ -579,6 +585,7 @@ h2.resp-accordion {
 	}
 	.flexslider .slides img {
 		width: 100%;
+		height: 85%;
 	}
 	.copy-right p {
 		font-size: 0.85em;

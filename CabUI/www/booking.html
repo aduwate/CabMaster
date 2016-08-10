@@ -3,6 +3,7 @@
 <head>
 <title>CabBooking</title>
 <link href="css/booking_css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/skeleton.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Cab Booking" />
@@ -95,22 +96,22 @@
 														<li  class="span1_of_1 desti">
 														 <h4>Booking Details </h4>
 															 <div class="section_dest">
-																  <input class="pickup" type="text" placeholder="Pick Up Location" />
+																  <input class="u-full-width" type="text" placeholder="Pick Up Post Code" id="pickup" required="required"/>
 															 </div>	
 														</li>
 														<li  class="span1_of_1 desti">
 															 <div class="section_dest">
-																  <input class="dest" type="text" placeholder="Destination Location" />
+																  <input class="u-full-width" type="text" placeholder="Destination Post Code" id="dest" required="required"/>
 															 </div>	
 														</li>
 														<li  class="span1_of_1">
-															 <div class="book_date">
-																	<input class="date" id="datepicker" type="text" value="PickUp Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
+															 <div class="twelve columns">
+																	<input class="u-full-width" id="datepick" type="date"  required="required"/>
 															</div>
 														 </li>
 														 <li  class="span1_of_1 left">
-															 <div class="book_date">
-																	<input class="time" id="timepicker" type="time" value="PickUp Time" required="">
+															 <div class="twelve columns">
+																	<input class="u-full-width" id="timepicker" type="time" value="00:00" required="required" />
 															 </div>					
 														 </li>
 														 <div class="groups">
@@ -118,7 +119,6 @@
 																<h5>Adults</h5>
 																<select class="custom-select" id="select-5">
 																	<option selected="selected">0</option>
-																	<option>0</option>
 																	<option>1</option>
 																	<option>2</option>
 																	<option>3</option>
@@ -128,7 +128,6 @@
 																<h5>Child</h5>
 																<select class="custom-select" id="select-6">
 																	<option selected="selected">0</option>
-																	<option>0</option>
 																	<option>1</option>
 																	<option>2</option>
 																	<option>3</option>
@@ -145,8 +144,10 @@
 															  </script>
 														<!---/End-date-piker-->
 															<div class="date_btn">
-																<button id="bookCab">Book It!</button>
-																<button id="btnLogout">Logout</button>			
+																<button id="btnBookCab" class="button-primary">Book It!</button>
+																<button id="btnLogout" class="button-primary">Logout</button>	
+																<br />
+																<p id="bookingMsg" class="hide">Booking Successful</p>
 															</div>
 														</div>
 													</ul>
@@ -164,13 +165,14 @@
 										<div class="b_room">
 											<div class="booking_room">
 											<div class="clear"></div>
-												<p>
-												<b>Pickup Location</b>: LU1 2NQ <br />
-												<strong>Destination Location</strong>: LU3 1YX <br />
-												<strong>PickUp Date:</strong> 10/01/2016 <br />
-												<strong>PickUp Time</strong>: 10:24 <br />
-												<strong>Adults</strong>: 2 <br />
-												<strong>Children</strong>: 5 <br />
+												<p id="bookingDetails">
+
+													<!-- <b>Pickup Location</b>: LU1 2NQ <br />
+													<strong>Destination Location</strong>: LU3 1YX <br />
+													<strong>PickUp Date:</strong> 10/01/2016 <br />
+													<strong>PickUp Time</strong>: 10:24 <br />
+													<strong>Adults</strong>: 2 <br />
+													<strong>Children</strong>: 5 <br /> -->
 												</p>
 											</div>
 											<hr>
