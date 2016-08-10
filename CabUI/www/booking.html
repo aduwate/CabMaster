@@ -93,74 +93,49 @@
 												<div class="reservation">
 													<ul>		
 														<li  class="span1_of_1 desti">
-														 <h4>Choose your destination </h4>
+														 <h4>Booking Details </h4>
 															 <div class="section_dest">
-																  <select>
-																		<option value="0">Destination City</option>
-																		<option value="1">Usa</option>
-																		<option value="2">London</option>
-																		<option value="3">Mexico</option>
-																		<option value="4">India</option>
-																	</select>
-															 </div>					
-														 </li>
-													</ul>
-												</div>
-												<div class="reservation">
-													<ul>	
-														 <li  class="span1_of_1">
-															 <h5>Check in date </h5>
+																  <input class="pickup" type="text" placeholder="Pick Up Location" />
+															 </div>	
+														</li>
+														<li  class="span1_of_1 desti">
+															 <div class="section_dest">
+																  <input class="dest" type="text" placeholder="Destination Location" />
+															 </div>	
+														</li>
+														<li  class="span1_of_1">
 															 <div class="book_date">
-																
-																	<input class="date" id="datepicker" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
-																
-															</div>	
-
+																	<input class="date" id="datepicker" type="text" value="PickUp Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
+															</div>
 														 </li>
 														 <li  class="span1_of_1 left">
-															 <h5>Check out date </h5>
 															 <div class="book_date">
-																
-																	<input class="date" id="datepicker1" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
-																
+																	<input class="time" id="timepicker" type="time" value="PickUp Time" required="">
 															 </div>					
 														 </li>
-														  <div class="clear"></div>
-														 </ul>
 														 <div class="groups">
-				                                                 <div class="grid_4 columns">
-																			<h5>Rooms</h5>
-																				<select class="custom-select" id="select-4">
-																					<option selected="selected">1</option>
-																					<option>1</option>
-																					<option>2</option>
-																					<option>3</option>
-																					<option>4</option>
-																				</select>
-																			</div>		
-																			<div class="grid_5 columns">
-																				<h5>Adults</h5>
-																				<select class="custom-select" id="select-5">
-																					<option selected="selected">0</option>
-																					<option>0</option>
-																					<option>1</option>
-																					<option>2</option>
-																					<option>3</option>
-																				</select>
-																			</div>	
-																			<div class="grid_6 columns">
-																				<h5>Child</h5>
-																				<select class="custom-select" id="select-6">
-																					<option selected="selected">0</option>
-																					<option>0</option>
-																					<option>1</option>
-																					<option>2</option>
-																					<option>3</option>
-																				</select>
-																			</div>	
-																			<div class="clear"></div>
-																		</div>
-														<!---strat-date-piker---->
+															<div class="grid_5 columns">
+																<h5>Adults</h5>
+																<select class="custom-select" id="select-5">
+																	<option selected="selected">0</option>
+																	<option>0</option>
+																	<option>1</option>
+																	<option>2</option>
+																	<option>3</option>
+																</select>
+															</div>	
+															<div class="grid_6 columns">
+																<h5>Child</h5>
+																<select class="custom-select" id="select-6">
+																	<option selected="selected">0</option>
+																	<option>0</option>
+																	<option>1</option>
+																	<option>2</option>
+																	<option>3</option>
+																</select>
+															</div>	
+															<div class="clear"></div>
+															<!---strat-date-piker-->
 															<link rel="stylesheet" href="css/booking_css/jquery-ui.css" />
 															<script src="js/jquery-ui.js"></script>
 															  <script>
@@ -168,15 +143,14 @@
 																		$( "#datepicker,#datepicker1" ).datepicker();
 																	  });
 															  </script>
-														<!---/End-date-piker---->
-												</div>
-													
-													<div class="date_btn">
-																	
-															<input type="submit" value="Book It">
-																	
+														<!---/End-date-piker-->
+															<div class="date_btn">
+																<button id="bookCab">Book It!</button>
+																<button id="btnLogout">Logout</button>			
+															</div>
 														</div>
-												
+													</ul>
+												</div>
 											</div>
 											<div class="clear"></div>
 										</div>
@@ -189,67 +163,17 @@
 								<div class="online_reservation">
 										<div class="b_room">
 											<div class="booking_room">
-											<form action="#" method="post">
-												<div class="reservation">
-													<ul>		
-														<li  class="span1_of_1 desti">
-														 <h4>What are you looking for? </h4>
-															 <div class="section_dest">
-																  <select>
-																		<option value="0">Destination City</option>
-																		<option value="1">Usa</option>
-																		<option value="2">London</option>
-																		<option value="3">Mexico</option>
-																		<option value="4">India</option>
-																	</select>
-															 </div>					
-														 </li>
-													</ul>
-												</div>
-												<div class="reservation">
-													
-														 <div class="groups">
-				                                                 <div class="grid_4 columns one">
-																			<h5>Hotels</h5>
-																				<select class="custom-select" id="select-4">
-																					<option selected="selected">Congue</option>
-																					<option>Tempor</option>
-																					<option>Maxim </option>
-																					<option>Villas</option>
-																					<option>Newro</option>
-																				</select>
-																			</div>		
-																			<div class="grid_5 columns one">
-																				<h5>Rooms</h5>
-																				<select class="custom-select" id="select-5">
-																					<option selected="selected">0</option>
-																					<option>0</option>
-																					<option>1</option>
-																					<option>2</option>
-																					<option>3</option>
-																				</select>
-																			</div>	
-
-																			<div class="clear"></div>
-																		</div>
-														<!---strat-date-piker---->
-															<link rel="stylesheet" href="css/booking_css/jquery-ui.css" />
-															<script src="js/jquery-ui.js"></script>
-															  <script>
-																	  $(function() {
-																		$( "#datepicker,#datepicker1" ).datepicker();
-																	  });
-															  </script>
-														<!---/End-date-piker---->
-												</div>
-													
-																<div class="date_btn">
-																	
-																		<input type="submit" value="Search">
-																	
-																</div>
-																</form>
+											<div class="clear"></div>
+												<p>
+												<b>Pickup Location</b>: LU1 2NQ <br />
+												<strong>Destination Location</strong>: LU3 1YX <br />
+												<strong>PickUp Date:</strong> 10/01/2016 <br />
+												<strong>PickUp Time</strong>: 10:24 <br />
+												<strong>Adults</strong>: 2 <br />
+												<strong>Children</strong>: 5 <br />
+												</p>
 											</div>
+											<hr>
 											<div class="clear"></div>
 										</div>
 								</div>

@@ -345,7 +345,7 @@ label.checkbox {
 	letter-spacing:1px;
 	color: #2F2F2F;
 }
- /*-- agileits --*/ 
+
 .login-form p a {
 	color:#fff;
 }
@@ -412,11 +412,14 @@ p.get-pw {
 :-ms-input-placeholder {  
    color: #fff;  
 }
-@media all and (max-width:1440px){
+/**
+@media all{
 .login-section {
     width: 55%;
+    height: 100%;
 }
 }
+
 @media all and (max-width:1366px){
 .login-section {
     width: 58%;
@@ -528,7 +531,7 @@ input#name,input#tel,input#email {
     margin: 4% auto 0;
 }
 .login-form input[type="text"], .login-form input[type="password"] {
-    width: 92%;
+    width:  92%;
 }
 }
 @media only screen and (max-width:568px) {
@@ -644,3 +647,4 @@ p.footer {
 .login-form input[type="submit"] {
     font-size: 15px;
 }
+**/
