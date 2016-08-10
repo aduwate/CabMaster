@@ -66,7 +66,7 @@
                             <li><a href="view_users.html">View Users</a></li>
                             <li><a class="menu-top-active" href="create_bookings.html">Create Booking</a></li>
                             <li><a href="create_users.html">Create Users</a></li>
-                            <li><a href="index.html">Logout</a></li>
+                            <li><a id="btnLogout">Logout</a></li>
 
                         </ul>
                     </div>
@@ -91,16 +91,16 @@
                         </div>
                         <div class="panel-body">
                           <div class="form-group">
-                            <label for="pickupLocation">Location</label>
-                            <input type="text" class="form-control" id="pickupLocation" placeholder="Enter Post Code" />
+                            <label for="pickup">Pick Up</label>
+                            <input type="text" class="form-control" id="pickup" placeholder="Enter Post Code" />
                           </div>
                           <div class="form-group">
-                            <label for="pickupDate">Date</label>
-                            <input type="date" class="form-control" id="pickupDate" placeholder="Select Date" />
+                            <label for="datepick">Date</label>
+                            <input type="date" class="form-control" id="datepick"/>
                           </div>
                           <div>
-                          <label for="pickupTime">Time</label>
-                          <input type="time" class="form-control" id="pickupTime" placeholder="Select Time" />
+                          <label for="timepicker">Time</label>
+                          <input type="time" class="form-control" id="timepicker"/>
                           </div>
                         </div>
                         </div>
@@ -108,29 +108,41 @@
                     <div class="col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                               Destination Details
+                               Trip Details
                             </div>
                             <div class="panel-body">
                                 <div class="form-group">
-                            <label for="pickupLocation">Location</label>
-                            <input type="text" class="form-control" id="pickupLocation" placeholder="Enter Post Code" />
-                              </div>
+                                <label for="dest">Destination</label>
+                                <input type="text" class="form-control" id="dest" placeholder="Enter Post Code" />
+                            </div>
+                            <div class="form-group">
+                                <label for="select-5">Adults</label>
+                                <select class="form-control" id="select-5">
+                                    <option selected>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
                               <div class="form-group">
-                                <label for="pickupDate">Date</label>
-                                <input type="date" class="form-control" id="pickupDate" placeholder="Select Date" />
+                                <label for="select-6">Child</label>
+                                <select class="form-control" id="select-6">
+                                    <option selected>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
                               </div>
-                              <div>
-                              <label for="pickupTime">Time</label>
-                              <input type="time" class="form-control" id="pickupTime" placeholder="Select Time" />
-                              </div>
+                              
                             </div>
                             </div>
-                                
                             </div>
                         </div>
                     </div>
                     <div align="center">
-                        <button id="" class="btn btn-danger btn-lg">Book Now</button>
+                        <button id="btnBookCab" class="btn btn-danger btn-lg">Book Now</button>
                         <button id="" class="btn btn-alert btn-lg">Cancel</button>
                     </div>
 
@@ -157,7 +169,7 @@
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-    <script src="CabUI/www/js/app.js"></script>
+    <script src="assets/js/app.js"></script>
     <!-- CORE JQUERY SCRIPTS -->
     <script src="assets/js/jquery-1.11.1.js"></script>
     <!-- BOOTSTRAP SCRIPTS  -->

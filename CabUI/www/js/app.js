@@ -112,7 +112,7 @@
     //Add a firebase realtime listener if user exists
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if (firebaseUser) {
-        console.log(firebaseUser);
+        console.log(firebaseUser.email);
       } else {
         console.log('not logged in');
       }
@@ -149,7 +149,7 @@
                                     detail.val().time + "\n" +
                                     detail.val().Adults + "\n" +
                                     detail.val().Child;
-        })
+        });
 
   		});
   	} 
